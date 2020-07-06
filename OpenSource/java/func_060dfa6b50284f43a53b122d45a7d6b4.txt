@@ -1,0 +1,1 @@
+return truncate(str, 0, maxWidth);

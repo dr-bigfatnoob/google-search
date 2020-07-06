@@ -1,0 +1,12 @@
+if (isEmpty(str) || isEmpty(wrapWith)) {
+        return str;
+    }
+    final StringBuilder builder = new StringBuilder(str.length() + wrapWith.length() + wrapWith.length());
+    if (!str.startsWith(wrapWith)) {
+        builder.append(wrapWith);
+    }
+    builder.append(str);
+    if (!str.endsWith(wrapWith)) {
+        builder.append(wrapWith);
+    }
+    return builder.toString();

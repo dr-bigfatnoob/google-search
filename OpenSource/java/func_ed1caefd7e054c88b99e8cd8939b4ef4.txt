@@ -1,0 +1,11 @@
+if (str == null || isEmpty(prefix) || startsWith(str, prefix, ignoreCase)) {
+        return str;
+    }
+    if (ArrayUtils.isNotEmpty(prefixes)) {
+        for (final CharSequence p : prefixes) {
+            if (startsWith(str, p, ignoreCase)) {
+                return str;
+            }
+        }
+    }
+    return prefix.toString() + str;

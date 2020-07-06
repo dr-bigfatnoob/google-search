@@ -1,0 +1,3 @@
+if isinstance(other, OrderedDict):
+    return dict.__eq__(self, other) and all(_imap(_eq, self, other))
+return dict.__eq__(self, other)

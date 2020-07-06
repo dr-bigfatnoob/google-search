@@ -1,0 +1,17 @@
+if (offset < 0) {
+        throw new IllegalArgumentException("offset cannot be negative");
+    }
+    if (maxWidth < 0) {
+        throw new IllegalArgumentException("maxWith cannot be negative");
+    }
+    if (str == null) {
+        return null;
+    }
+    if (offset > str.length()) {
+        return EMPTY;
+    }
+    if (str.length() > maxWidth) {
+        final int ix = offset + maxWidth > str.length() ? str.length() : offset + maxWidth;
+        return str.substring(offset, ix);
+    }
+    return str.substring(offset);

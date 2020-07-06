@@ -1,0 +1,1 @@
+return split(str, null, -1);

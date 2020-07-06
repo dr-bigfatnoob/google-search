@@ -1,0 +1,12 @@
+if (isEmpty(str) || isEmpty(wrapToken) || str.length() == 1) {
+        return str;
+    }
+    if (startsWith(str, wrapToken) && endsWith(str, wrapToken)) {
+        final int startIndex = str.indexOf(wrapToken);
+        final int endIndex = str.lastIndexOf(wrapToken);
+        final int wrapLength = wrapToken.length();
+        if (startIndex != -1 && endIndex != -1) {
+            return str.substring(startIndex + wrapLength, endIndex);
+        }
+    }
+    return str;

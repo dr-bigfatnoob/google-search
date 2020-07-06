@@ -1,0 +1,1 @@
+return stripAll(strs, null);

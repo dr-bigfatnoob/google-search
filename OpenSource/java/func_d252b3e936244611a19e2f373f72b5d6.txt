@@ -1,0 +1,4 @@
+if (isEmpty(str) || wrapWith == CharUtils.NUL) {
+        return str;
+    }
+    return wrapWith + str + wrapWith;

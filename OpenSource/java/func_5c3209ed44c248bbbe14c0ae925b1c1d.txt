@@ -1,0 +1,24 @@
+if (iterator == null) {
+        return null;
+    }
+    if (!iterator.hasNext()) {
+        return EMPTY;
+    }
+    final Object first = iterator.next();
+    if (!iterator.hasNext()) {
+        return Objects.toString(first, "");
+    }
+            final StringBuilder buf = new StringBuilder(STRING_BUILDER_SIZE);
+    if (first != null) {
+        buf.append(first);
+    }
+    while (iterator.hasNext()) {
+        if (separator != null) {
+            buf.append(separator);
+        }
+        final Object obj = iterator.next();
+        if (obj != null) {
+            buf.append(obj);
+        }
+    }
+    return buf.toString();

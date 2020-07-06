@@ -1,0 +1,1 @@
+return charsetName != null ? new String(bytes, charsetName) : new String(bytes, Charset.defaultCharset());

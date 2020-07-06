@@ -1,0 +1,4 @@
+if (isEmpty(str) || isEmpty(remove)) {
+        return str;
+    }
+    return replaceIgnoreCase(str, remove, EMPTY, -1);

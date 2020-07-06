@@ -1,0 +1,14 @@
+if (str == null) {
+        return null;
+    }
+    final int strLen = str.length();
+    if (strLen < 2) {
+        return EMPTY;
+    }
+    final int lastIdx = strLen - 1;
+    final String ret = str.substring(0, lastIdx);
+    final char last = str.charAt(lastIdx);
+    if (last == CharUtils.LF && ret.charAt(lastIdx - 1) == CharUtils.CR) {
+        return ret.substring(0, lastIdx - 1);
+    }
+    return ret;

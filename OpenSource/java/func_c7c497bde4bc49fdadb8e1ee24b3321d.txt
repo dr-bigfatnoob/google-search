@@ -1,0 +1,1 @@
+return !isBlank(cs);

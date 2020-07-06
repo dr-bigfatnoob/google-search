@@ -1,0 +1,1 @@
+return !isAnyBlank(css);

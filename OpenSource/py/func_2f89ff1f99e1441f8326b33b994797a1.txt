@@ -1,0 +1,5 @@
+root = self.__root
+curr = root[1]
+while curr is not root:
+    yield curr[2]
+    curr = curr[1]

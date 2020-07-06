@@ -1,0 +1,7 @@
+if (str == null || prefix == null) {
+        return str == prefix;
+    }
+    if (prefix.length() > str.length()) {
+        return false;
+    }
+    return CharSequenceUtils.regionMatches(str, ignoreCase, 0, prefix, 0, prefix.length());

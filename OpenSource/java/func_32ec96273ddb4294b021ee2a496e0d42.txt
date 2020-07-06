@@ -1,0 +1,7 @@
+try {
+        return String.valueOf(o);
+    } catch (Exception e) {
+                String objectToString = o.getClass().getName() + '@' + Integer.toHexString(System.identityHashCode(o));
+                Logger.getLogger("com.google.common.base.Strings").log(WARNING, "Exception during lenientFormat for " + objectToString, e);
+        return "<" + objectToString + " threw " + e.getClass().getName() + ">";
+    }

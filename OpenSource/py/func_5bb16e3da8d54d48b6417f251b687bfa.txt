@@ -1,0 +1,13 @@
+if not args:
+    raise TypeError(
+        "descriptor 'format' of 'Formatter' object needs an argument")
+self, args = args[0], args[1:]
+try:
+    format_string, args = args[0], args[1:]
+except IndexError:
+    if 'format_string' in kwargs:
+        format_string = kwargs.pop('format_string')
+    else:
+        raise TypeError(
+            "format() missing 1 required positional argument: 'format_string'")
+return self.vformat(format_string, args, kwargs)

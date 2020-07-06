@@ -1,0 +1,18 @@
+if not args:
+    raise TypeError(
+        "descriptor 'subtract' of 'Counter' object needs an argument")
+self = args[0]
+args = args[1:]
+if len(args) > 1:
+    raise TypeError('expected at most 1 arguments, got %d' % len(args))
+iterable = args[0] if args else None
+if iterable is not None:
+    self_get = self.get
+    if isinstance(iterable, Mapping):
+        for elem, count in iterable.items():
+            self[elem] = self_get(elem, 0) - count
+    else:
+        for elem in iterable:
+            self[elem] = self_get(elem, 0) - 1
+if kwds:
+    self.subtract(kwds)

@@ -1,0 +1,4 @@
+if isinstance(key, (int, long)):
+    return args[key]
+else:
+    return kwargs[key]

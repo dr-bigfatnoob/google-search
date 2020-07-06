@@ -1,0 +1,8 @@
+if (ArrayUtils.isNotEmpty(searchStrings)) {
+        for (final CharSequence next : searchStrings) {
+            if (equalsIgnoreCase(string, next)) {
+                return true;
+            }
+        }
+    }
+    return false;

@@ -1,0 +1,1 @@
+return replaceIgnoreCase(text, searchString, replacement, 1);

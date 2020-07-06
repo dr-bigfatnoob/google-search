@@ -1,0 +1,1 @@
+return RegExUtils.replaceFirst(text, regex, replacement);

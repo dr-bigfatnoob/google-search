@@ -1,0 +1,1 @@
+return isBlank(str) ? defaultSupplier == null ? null : defaultSupplier.get() : str;

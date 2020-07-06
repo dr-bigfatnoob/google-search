@@ -1,0 +1,2 @@
+self._primary = primary
+self._secondary = secondary

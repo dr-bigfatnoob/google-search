@@ -1,0 +1,4 @@
+self = cls()
+for key in iterable:
+    self[key] = value
+return self

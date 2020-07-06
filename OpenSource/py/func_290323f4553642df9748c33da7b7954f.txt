@@ -1,0 +1,2 @@
+raise NotImplementedError(
+    'Counter.fromkeys() is undefined.  Use Counter(iterable) instead.')

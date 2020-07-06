@@ -1,0 +1,11 @@
+if not isinstance(other, Counter):
+    return NotImplemented
+result = Counter()
+for elem, count in self.items():
+    newcount = count + other[elem]
+    if newcount > 0:
+        result[elem] = newcount
+for elem, count in other.items():
+    if elem not in self and count > 0:
+        result[elem] = count
+return result

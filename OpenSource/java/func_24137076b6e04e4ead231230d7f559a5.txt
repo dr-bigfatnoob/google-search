@@ -1,0 +1,12 @@
+if (isEmpty(str) || wrapWith == CharUtils.NUL) {
+        return str;
+    }
+    final StringBuilder builder = new StringBuilder(str.length() + 2);
+    if (str.charAt(0) != wrapWith) {
+        builder.append(wrapWith);
+    }
+    builder.append(str);
+    if (str.charAt(str.length() - 1) != wrapWith) {
+        builder.append(wrapWith);
+    }
+    return builder.toString();

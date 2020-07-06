@@ -1,0 +1,3 @@
+if not isinstance(x, basestring):
+    x = repr(x)
+return x.zfill(width)

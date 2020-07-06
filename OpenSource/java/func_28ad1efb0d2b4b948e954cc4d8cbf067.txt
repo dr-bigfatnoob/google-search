@@ -1,0 +1,8 @@
+if (isEmpty(str) || isEmpty(separator)) {
+        return str;
+    }
+    final int pos = str.lastIndexOf(separator);
+    if (pos == INDEX_NOT_FOUND) {
+        return str;
+    }
+    return str.substring(0, pos);

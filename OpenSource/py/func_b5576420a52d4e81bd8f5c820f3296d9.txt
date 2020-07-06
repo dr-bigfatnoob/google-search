@@ -1,0 +1,22 @@
+if not args:
+    raise TypeError("descriptor 'update' of 'Counter' object needs an argument"
+        )
+self = args[0]
+args = args[1:]
+if len(args) > 1:
+    raise TypeError('expected at most 1 arguments, got %d' % len(args))
+iterable = args[0] if args else None
+if iterable is not None:
+    if isinstance(iterable, Mapping):
+        if self:
+            self_get = self.get
+            for elem, count in iterable.iteritems():
+                self[elem] = self_get(elem, 0) + count
+        else:
+            super(Counter, self).update(iterable)
+    else:
+        self_get = self.get
+        for elem in iterable:
+            self[elem] = self_get(elem, 0) + 1
+if kwds:
+    self.update(kwds)

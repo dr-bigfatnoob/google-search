@@ -1,0 +1,9 @@
+if (isEmpty(sequence) || ArrayUtils.isEmpty(searchStrings)) {
+        return false;
+    }
+    for (final CharSequence searchString : searchStrings) {
+        if (startsWith(sequence, searchString)) {
+            return true;
+        }
+    }
+    return false;

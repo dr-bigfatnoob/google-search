@@ -1,0 +1,5 @@
+if not self:
+    raise KeyError('dictionary is empty')
+key = next(reversed(self) if last else iter(self))
+value = self.pop(key)
+return key, value

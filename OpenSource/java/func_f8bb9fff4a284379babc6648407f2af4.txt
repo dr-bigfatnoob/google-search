@@ -1,0 +1,15 @@
+if (str == null || searchStrs == null) {
+        return INDEX_NOT_FOUND;
+    }
+    int ret = INDEX_NOT_FOUND;
+    int tmp = 0;
+    for (final CharSequence search : searchStrs) {
+        if (search == null) {
+            continue;
+        }
+        tmp = CharSequenceUtils.lastIndexOf(str, search, str.length());
+        if (tmp > ret) {
+            ret = tmp;
+        }
+    }
+    return ret;

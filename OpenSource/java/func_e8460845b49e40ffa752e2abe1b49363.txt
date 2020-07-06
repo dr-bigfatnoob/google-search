@@ -1,0 +1,11 @@
+if (str == null || isEmpty(suffix) || endsWith(str, suffix, ignoreCase)) {
+        return str;
+    }
+    if (ArrayUtils.isNotEmpty(suffixes)) {
+        for (final CharSequence s : suffixes) {
+            if (endsWith(str, s, ignoreCase)) {
+                return str;
+            }
+        }
+    }
+    return str + suffix.toString();

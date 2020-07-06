@@ -1,0 +1,1 @@
+return prependIfMissing(str, prefix, true, prefixes);

@@ -1,0 +1,7 @@
+if (input == null) {
+        return null;
+    }
+        final Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
+    final StringBuilder decomposed = new StringBuilder(Normalizer.normalize(input, Normalizer.Form.NFD));
+    convertRemainingAccentCharacters(decomposed);
+        return pattern.matcher(decomposed).replaceAll(EMPTY);

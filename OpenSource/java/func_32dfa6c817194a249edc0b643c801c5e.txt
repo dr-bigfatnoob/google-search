@@ -1,0 +1,9 @@
+if (ArrayUtils.isEmpty(css)) {
+        return true;
+    }
+    for (final CharSequence cs : css) {
+        if (isNotBlank(cs)) {
+            return false;
+        }
+    }
+    return true;

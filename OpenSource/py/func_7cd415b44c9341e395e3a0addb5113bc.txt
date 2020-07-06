@@ -1,0 +1,3 @@
+if n is None:
+    return sorted(self.iteritems(), key=_itemgetter(1), reverse=True)
+return _heapq.nlargest(n, self.iteritems(), key=_itemgetter(1))

@@ -1,0 +1,1 @@
+return source == null ? null : source.toLowerCase(Locale.ROOT);

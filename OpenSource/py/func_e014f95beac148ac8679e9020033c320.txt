@@ -1,0 +1,4 @@
+if deletions or table is None:
+    return s.translate(table, deletions)
+else:
+    return s.translate(table + s[:0])

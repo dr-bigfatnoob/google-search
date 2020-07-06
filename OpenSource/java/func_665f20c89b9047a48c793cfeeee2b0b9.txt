@@ -1,0 +1,1 @@
+return replaceFirst(text, regex, EMPTY);

@@ -1,0 +1,17 @@
+int strLen = length(str);
+    if (strLen == 0) {
+        return str;
+    }
+    int start = 0;
+    if (stripChars == null) {
+        while (start != strLen && Character.isWhitespace(str.charAt(start))) {
+            start++;
+        }
+    } else if (stripChars.isEmpty()) {
+        return str;
+    } else {
+        while (start != strLen && stripChars.indexOf(str.charAt(start)) != INDEX_NOT_FOUND) {
+            start++;
+        }
+    }
+    return str.substring(start);

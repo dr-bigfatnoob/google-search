@@ -1,0 +1,4 @@
+if (iterable == null) {
+        return null;
+    }
+    return join(iterable.iterator(), separator);

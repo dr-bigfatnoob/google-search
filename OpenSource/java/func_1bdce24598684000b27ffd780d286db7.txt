@@ -1,0 +1,1 @@
+return abbreviate(str, abbrevMarker, 0, maxWidth);

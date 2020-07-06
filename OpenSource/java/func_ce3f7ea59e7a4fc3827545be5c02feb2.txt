@@ -1,0 +1,8 @@
+if (values != null) {
+        for (final T val : values) {
+            if (isNotEmpty(val)) {
+                return val;
+            }
+        }
+    }
+    return null;

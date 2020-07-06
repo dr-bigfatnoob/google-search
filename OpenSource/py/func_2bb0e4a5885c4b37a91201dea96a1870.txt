@@ -1,0 +1,4 @@
+dict_delitem(self, key)
+link_prev, link_next, _ = self.__map.pop(key)
+link_prev[1] = link_next
+link_next[0] = link_prev

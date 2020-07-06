@@ -1,0 +1,9 @@
+if not isinstance(other, Counter):
+    return NotImplemented
+result = Counter()
+for elem, count in self.items():
+    other_count = other[elem]
+    newcount = count if count < other_count else other_count
+    if newcount > 0:
+        result[elem] = newcount
+return result

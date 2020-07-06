@@ -1,0 +1,1 @@
+return splitWorker(str, separatorChars, -1, true);

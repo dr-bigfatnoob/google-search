@@ -1,0 +1,9 @@
+if not args:
+    raise TypeError(
+        "descriptor '__init__' of 'Counter' object needs an argument")
+self = args[0]
+args = args[1:]
+if len(args) > 1:
+    raise TypeError('expected at most 1 arguments, got %d' % len(args))
+super(Counter, self).__init__()
+self.update(*args, **kwds)

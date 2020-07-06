@@ -1,0 +1,1 @@
+return RegExUtils.removeAll(text, regex);

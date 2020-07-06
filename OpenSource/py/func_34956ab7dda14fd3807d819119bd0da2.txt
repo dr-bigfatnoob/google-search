@@ -1,0 +1,2 @@
+if elem in self:
+    super(Counter, self).__delitem__(elem)

@@ -1,0 +1,9 @@
+if (list == null) {
+        return null;
+    }
+    final int noOfItems = endIndex - startIndex;
+    if (noOfItems <= 0) {
+        return EMPTY;
+    }
+    final List<?> subList = list.subList(startIndex, endIndex);
+    return join(subList.iterator(), separator);

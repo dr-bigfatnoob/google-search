@@ -1,0 +1,11 @@
+if (isEmpty(str)) {
+        return str;
+    }
+    if (separator == null) {
+        return EMPTY;
+    }
+    final int pos = str.indexOf(separator);
+    if (pos == INDEX_NOT_FOUND) {
+        return EMPTY;
+    }
+    return str.substring(pos + separator.length());

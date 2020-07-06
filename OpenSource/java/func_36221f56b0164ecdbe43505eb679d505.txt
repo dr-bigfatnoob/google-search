@@ -1,0 +1,26 @@
+if (isEmpty(text) || isEmpty(searchString) || replacement == null || max == 0) {
+        return text;
+    }
+    if (ignoreCase) {
+        searchString = searchString.toLowerCase();
+    }
+    int start = 0;
+    int end = ignoreCase ? indexOfIgnoreCase(text, searchString, start) : indexOf(text, searchString, start);
+    if (end == INDEX_NOT_FOUND) {
+        return text;
+    }
+    final int replLength = searchString.length();
+    int increase = replacement.length() - replLength;
+    increase = increase < 0 ? 0 : increase;
+    increase *= max < 0 ? 16 : max > 64 ? 64 : max;
+    final StringBuilder buf = new StringBuilder(text.length() + increase);
+    while (end != INDEX_NOT_FOUND) {
+        buf.append(text, start, end).append(replacement);
+        start = end + replLength;
+        if (--max == 0) {
+            break;
+        }
+        end = ignoreCase ? indexOfIgnoreCase(text, searchString, start) : indexOf(text, searchString, start);
+    }
+    buf.append(text, start, text.length());
+    return buf.toString();

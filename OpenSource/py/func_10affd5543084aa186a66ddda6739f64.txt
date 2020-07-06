@@ -1,0 +1,9 @@
+named = mo.group('named') or mo.group('braced')
+if named is not None:
+    val = mapping[named]
+    return '%s' % (val,)
+if mo.group('escaped') is not None:
+    return self.delimiter
+if mo.group('invalid') is not None:
+    self._invalid(mo)
+raise ValueError('Unrecognized named group in pattern', self.pattern)

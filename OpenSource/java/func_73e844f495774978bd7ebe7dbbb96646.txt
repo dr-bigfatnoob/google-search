@@ -1,0 +1,9 @@
+if (isEmpty(cs) || ArrayUtils.isEmpty(searchCharSequences)) {
+        return false;
+    }
+    for (final CharSequence searchCharSequence : searchCharSequences) {
+        if (contains(cs, searchCharSequence)) {
+            return true;
+        }
+    }
+    return false;

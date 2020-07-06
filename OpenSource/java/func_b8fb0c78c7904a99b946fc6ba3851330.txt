@@ -1,0 +1,4 @@
+if (isEmpty(str) || isEmpty(wrapWith)) {
+        return str;
+    }
+    return wrapWith.concat(str).concat(wrapWith);

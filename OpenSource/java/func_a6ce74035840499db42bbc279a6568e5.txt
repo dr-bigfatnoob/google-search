@@ -1,0 +1,1 @@
+return splitByCharacterType(str, false);

@@ -1,0 +1,4 @@
+if (isEmpty(seq)) {
+        return false;
+    }
+    return CharSequenceUtils.indexOf(seq, searchChar, 0) >= 0;
