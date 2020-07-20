@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://dr-bigfatnoob.github.io/google-search/sitemap.xml
